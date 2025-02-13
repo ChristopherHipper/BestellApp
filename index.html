@@ -21,7 +21,7 @@
                 <img src="./assets/icon/besteck.png" alt="">
                 <h1>App</h1>
             </div>
-            <img src="./assets/icon/" alt="Burger">
+            <img src="./assets/icon/burger.png" alt="Burger">
         </div>
     </header>
 
@@ -35,9 +35,9 @@
             </div>
             <div class="navbar">
                 <img src="./assets/img/pfeil.png" alt="">
-                <h3>Haupgerichte</h3>
-                <h3>Salate</h3>
-                <h3>Getränke</h3>
+                <a href="#main_dish_content"><h3>Haupgerichte</h3></a>
+                <a href="#salad_dish_content"><h3>Salate</h3></a>
+                <a href="#drinks_dish_content"><h3>Getränke</h3></a>
             </div>
             <div>
                 <img class="food_img" src="./assets/img/hauptgang.jpg" alt="">
@@ -58,7 +58,7 @@
                 <h3 class="dish_header">Salate</h3>
             </div>
 
-            <div id="sala_dish_content" class="dish_content">
+            <div id="salad_dish_content" class="dish_content">
                 <div class="dish_infos">
                     <h3>salad_Dish_Name</h3>
                     <span>description</span>
@@ -82,9 +82,18 @@
             </div>
 
         </div>
-        <div>
+        <div id="basket" class="basket sticky">
             <h2>Warenkorb</h2>
             <div class="seperator"></div>
+            <div class="icon_container">
+                <img class="icon" src="./assets/icon/liefern.png" alt="">
+                <img class="icon" src="./assets/icon/abholen.png" alt="">
+            </div>
+            <div class="seperator"></div>
+            <div class="empty_basket">
+                <h3>Fülle deinen Warenkorb</h3>
+                <span>Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</span>
+            </div>
         </div>
     </main>
 
@@ -96,7 +105,7 @@
 
     <footer>
         <div class="footer_content max_width">
-            <a class="impressum_link" href="./impressum.html">Impressum</a>
+            <a href="./impressum.html">Impressum</a>
         </div>
     </footer>
     

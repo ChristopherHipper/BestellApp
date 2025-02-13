@@ -5,7 +5,7 @@ header{
 }
 
 main{
-    min-height: calc(100vh - 140px);
+    height: 100%;
     display: flex;
     color: black;
 }
@@ -45,15 +45,14 @@ span{
     color: gray;
 }
 
-button{
-    color:  rgb(255,128,0);
-	background-color:transparent;
-	display:inline-block;
-	cursor:pointer;
-	font-family:Arial;
-	font-size:36px;
-	font-weight:bold;
-	padding:0px 0px;
-	text-decoration:none;
-    border: 0;
-}
+
+
+.sticky {
+    position: sticky;
+    top: 0px;
+    align-self: flex-start;
+  }
+
+  a{
+    text-decoration: none;
+  }
