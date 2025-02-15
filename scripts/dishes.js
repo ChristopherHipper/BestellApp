@@ -1,5 +1,4 @@
 let mainDishes = [
-	
 	{ "name" : "Pizza Diavola",
 	  "description": "mit Truthahnsalami, Paprika und scharfen Peperoni",
 	  "price": 7.00
@@ -22,10 +21,7 @@ let mainDishes = [
 	}
 ];
 
-
-
-	let salads = [
-	
+let salads = [
 	{ "name" : "Gemischter Salat",
 	  "description": "mit Eisbergsalat, Tomaten, Gurken, Paprika, Oliven und Mais",
 	  "price": 4.50
@@ -36,8 +32,7 @@ let mainDishes = [
 	}
 ];
 
-	let drinks = [
-	
+let drinks = [
 	{ "name" : "Coca-Cola 0,33l",
 	  "description": "Coca-Cola steht für einzigartigen Geschmack",
 	  "price": 2.25

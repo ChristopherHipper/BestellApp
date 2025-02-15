@@ -13,7 +13,7 @@
     <script src="./scripts/template.js"></script>
     <script src="./script.js"></script>
 </head>
-<body>
+<body onload="init()">
     <header>
         <div class="header_content max_width">
             <div class="logo_content">
@@ -44,13 +44,7 @@
                 <h3 class="dish_header">Haupgerichte</h3>
             </div>
 
-            <div id="main_dish_content" class="dish_content">
-                <div class="dish_infos">
-                    <h3>Main_Dish_Name</h3>
-                    <span>description</span>
-                    <p>price</p>
-                </div>
-                <button>+</button>
+            <div id="main_dish_content">
             </div>
 
             <div>
@@ -58,13 +52,7 @@
                 <h3 class="dish_header">Salate</h3>
             </div>
 
-            <div id="salad_dish_content" class="dish_content">
-                <div class="dish_infos">
-                    <h3>salad_Dish_Name</h3>
-                    <span>description</span>
-                    <p>price</p>
-                </div>
-                <button>+</button>
+            <div id="salad_dish_content">
             </div>
 
             <div>
@@ -72,24 +60,16 @@
                 <h3 class="dish_header">Getränke</h3>
             </div>
 
-            <div id="drinks_dish_content" class="dish_content">
-                <div class="dish_infos">
-                    <h3>salad_Dish_Name</h3>
-                    <span>description</span>
-                    <p>price</p>
-                </div>
-                <button>+</button>
+            <div id="drinks_dish_content">
             </div>
 
         </div>
         <div id="basket" class="basket sticky">
             <h2>Warenkorb</h2>
-            <div class="seperator"></div>
             <div class="icon_container">
                 <img class="icon" src="./assets/icon/liefern.png" alt="">
                 <img class="icon" src="./assets/icon/abholen.png" alt="">
             </div>
-            <div class="seperator"></div>
             <div class="empty_basket">
                 <h3>Fülle deinen Warenkorb</h3>
                 <span>Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</span>
