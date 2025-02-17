@@ -139,5 +139,26 @@ button{
     border: 0;
 }
 
+.trash_img{
+    height: 24px;
+    cursor:pointer;
+}
+
+.basket_container{
+    width: 100%;
+    margin-top: 12px;
+    text-align: center;
+
+}
+
+.basket_content{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
 
 
