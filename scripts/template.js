@@ -11,12 +11,12 @@ function getMainDishesTemplate(indexMain) {
 
 function getMainDishBasketTemplate(indexMain) {
     return `<div id=${"main"+ indexMain}>
-                <h3>${mainDishes[indexMain].name}</h3>
+                <h3>${basket[indexMain].name}</h3>
                 <div class="basket_content">
                     <button>-</button>
-                    <span>1x</span>
+                    <span>${basket[indexMain].ammount}x</span>
                     <button>+</button>
-                    <span>${mainDishes[indexMain].price.toFixed(2).replace(".",",")}€</span>
+                    <span>${basket[indexMain].totalPrice.toFixed(2).replace(".",",")}€</span>
                     <img onclick="removeFromMainBasket(${indexMain})" class="trash_img" src="./assets/icon/mulleimer.png" alt="">
                 </div>
             </div>`

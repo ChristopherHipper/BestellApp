@@ -11,11 +11,74 @@ function renderMainDishes () {
     };
 };
 
+function removeFromMainBasket(indexMain) {
+    let removeMainRef = document.getElementById("main" + indexMain);
+    removeMainRef.remove();
+    showPlaceholder()
+}
+
 function addToMainBasket(indexMain) {
+    if (basket[indexMain]) {
+        basket[indexMain].ammount += 1;
+        basket[indexMain].totalPrice += mainDishes[indexMain].price;
+    } else {
+        basket[indexMain] = {
+            name: mainDishes[indexMain].name,
+            ammount: 1,
+            totalPrice: mainDishes[indexMain].price
+        };      
+    }
+    updateMainBasket(indexMain)
+}
+
+function updateMainBasket(indexMain) {
     document.getElementById('empty_basket').classList.add('display_none');
     let basketRef = document.getElementById('basket')
-    basketRef.innerHTML += getMainDishBasketTemplate(indexMain);
+    basketRef.innerHTML = '';
+    for (let indexMain = 0; indexMain < basket.length; indexMain++) {
+        basketRef.innerHTML += getMainDishBasketTemplate(indexMain)
+    };
 }
+
+
+
+
+
+
+
+
+
+
+function showPlaceholder() {
+    let placeholderRef = document.getElementById('basket')
+    if (placeholderRef != null && placeholderRef.innerHTML.trim() === '') {
+        document.getElementById('empty_basket').classList.remove('display_none');
+    }else
+        return;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function renderSaladDishes () {
     let saladDishesRef = document.getElementById('salad_dish_content')
@@ -43,11 +106,7 @@ function addToDrinksBasket(indexDrinks) {
     basketRef.innerHTML += getDrinksBasketTemplate(indexDrinks);
 }
 
-function removeFromMainBasket(indexMain) {
-    let removeMainRef = document.getElementById("main" + indexMain);
-    removeMainRef.remove();
-    showPlaceholder()
-}
+
 
 function removeFromSaladBasket(indexSalad) {
     let removeMainRef = document.getElementById("salad" + indexSalad);
@@ -61,12 +120,9 @@ function removeFromDrinksBasket(indexDrinks) {
     showPlaceholder()
 }
 
-function showPlaceholder() {
-    let placeholderRef = document.getElementById('basket')
-    if (placeholderRef != null && placeholderRef.innerHTML.trim() === '') {
-        document.getElementById('empty_basket').classList.remove('display_none');
-    }else
-        return;
-}
+
+
+
+
 
 
