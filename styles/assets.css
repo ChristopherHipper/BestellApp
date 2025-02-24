@@ -8,6 +8,7 @@ main{
     height: 100%;
     display: flex;
     color: black;
+    position: relative;
 }
 
 footer{
@@ -19,6 +20,7 @@ h2{
     font-size: 20px;
     padding: 12px 18px;
 }
+
 h3{
     font-size: 16px;
 }
@@ -45,14 +47,25 @@ span{
     color: gray;
 }
 
-
-
 .sticky {
     position: sticky;
     top: 0px;
     align-self: flex-start;
-  }
+}
 
   a{
     text-decoration: none;
   }
+
+  button{
+    color:  rgb(255,128,0);
+	background-color:transparent;
+	display:inline-block;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:36px;
+	font-weight:bold;
+	padding:0px 0px;
+	text-decoration:none;
+    border: 0;
+}

@@ -1,5 +1,5 @@
 function getDishesTemplate(dish, category, index) {
-    return `<div class="dish_content">
+    return `<div onclick="addToBasket('${category}', ${[index]})" class="dish_content">
                 <div class="dish_infos">
                     <h3>${dish[index].name}</h3>
                     <span>${dish[index].description}</span>

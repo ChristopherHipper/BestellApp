@@ -4,7 +4,6 @@ function init() {
     renderDishes ()
 };
 
-
 function renderDishes () {
     let mainDishesRef = document.getElementById('main_dish_content')
     for (let x = 0; x < allDishes.mainDishes.length; x++) {
@@ -84,7 +83,6 @@ function addAgainToBasket(index) {
 
 
 function allCosts() {
-
     let sumAndDelivery = 0;
     let sum = 0;
     let costsRef = document.getElementById('costs')
@@ -93,7 +91,6 @@ function allCosts() {
         sumAndDelivery = sum + deliveryCosts;
         costsRef.innerHTML = getCostsTemplate(sum, deliveryCosts, sumAndDelivery)
     };
-    
 }
 
 function addDelivery() {
@@ -108,6 +105,15 @@ function removeDelivery() {
     allCosts();
 }
 
+function openRespMenu(id) {
+    document.getElementById(id).classList.remove('closed_menu'); 
+    document.getElementById("body").style.overflow = "hidden";
+}
+
+function closeRespMenu(id) {
+    document.getElementById(id).classList.add('closed_menu'); 
+    document.getElementById("body").style.overflow = "auto";
+}
 
 
 

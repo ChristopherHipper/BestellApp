@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./style.css">
 
-    <script src="./scripts/dishes.js"></script>
+    <script src="./scripts/db.js"></script>
     <script src="./scripts/template.js"></script>
     <script src="./script.js"></script>
 </head>
-<body onload="init()">
+<body id="body" onload="init()">
     <header>
-        <div class="header_content max_width">
+        <div class="header_content">
             <div class="logo_content">
                 <h1>Beste</h1>
                 <img src="./assets/icon/besteck.png" alt="">
@@ -24,8 +24,6 @@
             <img src="./assets/icon/burger.png" alt="Burger">
         </div>
     </header>
-
-
     <main>
         <div class="main_content">
             <div class="main_img"></div>
@@ -43,39 +41,35 @@
                 <img class="food_img" src="./assets/img/hauptgang.jpg" alt="">
                 <h3 class="dish_header">Haupgerichte</h3>
             </div>
-
             <div id="main_dish_content">
             </div>
-
             <div>
                 <img class="food_img" src="./assets/img/salad.jpg" alt="">
                 <h3 class="dish_header">Salate</h3>
             </div>
-
             <div id="salad_dish_content">
             </div>
-
             <div>
                 <img class="food_img" src="./assets/img/drinks.jpg" alt="">
                 <h3 class="dish_header">Getränke</h3>
             </div>
-
             <div id="drinks_dish_content">
             </div>
-
         </div>
-        <div class="basket sticky">
-            <h2>Warenkorb</h2>
+        <div id='resp_menu' class="basket sticky closed_menu resp_menu_box">
+            <div class="headline_basket">
+                <h2>Warenkorb</h2>
+                <button onclick="closeRespMenu('resp_menu')" class="close_basket_button">X</button>
+            </div>
+            
             <div class="icon_container">
                 <img onclick="addDelivery()" class="icon" src="./assets/icon/liefern.png" alt="">
                 <img onclick="removeDelivery()" class="icon" src="./assets/icon/abholen.png" alt="">
             </div>
             <div class="seperator"></div>
             <div id="basket" class="basket_container">
-              
             </div>
             <div id="costs" class="costs">
-
             </div>
             <div id="empty_basket" class="empty_basket">
                 <h3>Fülle deinen Warenkorb</h3>
@@ -83,18 +77,15 @@
             </div>
         </div>
     </main>
-
-
-
-
-
-
-
+    <div class="basket_mobile">
+        <button onclick="openRespMenu('resp_menu')">Warenkorb</button>
+    </div>
     <footer>
         <div class="footer_content max_width">
             <a href="./impressum.html">Impressum</a>
         </div>
     </footer>
+
     
 </body>
 </html>
