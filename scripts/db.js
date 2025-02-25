@@ -51,4 +51,4 @@ let allDishes = {
 		"ammount" : 0
 	  }]
 
-}
+};

@@ -1,7 +1,7 @@
 let deliveryCosts = 5;
 
 function init() {
-    renderDishes ()
+    renderDishes ();
 };
 
 function renderDishes () {
@@ -24,15 +24,15 @@ function addToBasket(category, index) {
     let check = allDishes[category][index].name;
     function isIncluded(dish) {
         return dish.name === check;
-      }
+      };
       if (basket.find(isIncluded) == undefined) {
         basket.push(allDishes[category][index]);
         allDishes[category][index].ammount ++;
       }else {
         allDishes[category][index].ammount ++;
          allDishes[category][index].totalPrice = allDishes[category][index].price * allDishes[category][index].ammount;     
-      }
-        updateBasket()
+      };
+        updateBasket();
 };
 
 function updateBasket() {
@@ -43,7 +43,7 @@ function updateBasket() {
     for (let index = 0; index < basket.length; index++) {
         basketRef.innerHTML += getBasketTemplate(index)
     };
-    allCosts()
+    allCosts();
 };
 
 function showPlaceholder() {
@@ -60,7 +60,7 @@ function deleteFromBasket(index) {
     let deleteMainRef = document.getElementById("meal" + index);
     deleteMainRef = basket.splice(index, 1)
     updateBasket();
-    showPlaceholder()
+    showPlaceholder();
 };
 
 function removeFromBasket(index) {
@@ -70,16 +70,16 @@ function removeFromBasket(index) {
         basket[index].ammount = 0;
         basket[index].totalPrice = basket[index].price;
         basket.splice(index, 1)
-    }
-    updateBasket()
-    showPlaceholder()
+    };
+    updateBasket();
+    showPlaceholder();
 };
 
 function addAgainToBasket(index) {
     basket[index].ammount ++;
     basket[index].totalPrice += basket[index].price;
     updateBasket();
-}
+};
 
 
 function allCosts() {
@@ -91,28 +91,31 @@ function allCosts() {
         sumAndDelivery = sum + deliveryCosts;
         costsRef.innerHTML = getCostsTemplate(sum, deliveryCosts, sumAndDelivery)
     };
-}
+    if (deliveryCosts == 0) {
+        document.getElementById("delivery").style.display = "none";
+    };
+};
 
 function addDelivery() {
-    document.getElementById('delivery').classList.remove('display_none'); 
     deliveryCosts = 5;
     allCosts();
 }
 
 function removeDelivery() {
-    document.getElementById('delivery').classList.add('display_none');
     deliveryCosts = 0;
     allCosts();
 }
 
 function openRespMenu(id) {
-    document.getElementById(id).classList.remove('closed_menu'); 
+    document.getElementById(id).classList.toggle('closed_menu'); 
     document.getElementById("body").style.overflow = "hidden";
+    document.getElementById("basket_mobile").style.display = "none";
 }
 
 function closeRespMenu(id) {
     document.getElementById(id).classList.add('closed_menu'); 
     document.getElementById("body").style.overflow = "auto";
+    document.getElementById("basket_mobile").style.display = "flex";
 }
 
 

@@ -15,12 +15,13 @@
 </head>
 <body id="body" onload="init()">
     <header>
+        
         <div class="header_content">
-            <div class="logo_content">
+            <a href="./index.html" class="logo_content">
                 <h1>Beste</h1>
                 <img src="./assets/icon/besteck.png" alt="">
                 <h1>App</h1>
-            </div>
+            </a>
             <img src="./assets/icon/burger.png" alt="Burger">
         </div>
     </header>
@@ -77,15 +78,13 @@
             </div>
         </div>
     </main>
-    <div class="basket_mobile">
-        <button onclick="openRespMenu('resp_menu')">Warenkorb</button>
+    <div id="basket_mobile" class="basket_mobile">
+        <button class="basket_btn" onclick="openRespMenu('resp_menu')">Warenkorb</button>
     </div>
     <footer>
         <div class="footer_content max_width">
             <a href="./impressum.html">Impressum</a>
         </div>
     </footer>
-
-    
 </body>
 </html>

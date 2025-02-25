@@ -7,7 +7,7 @@ function getDishesTemplate(dish, category, index) {
                 </div>
                 <button onclick="addToBasket('${category}', ${[index]})">+</button>
             </div>`
-}
+};
 
 function getBasketTemplate(index) {
     return `<div id=${"meal"+ index}>
@@ -20,14 +20,13 @@ function getBasketTemplate(index) {
                     <img onclick="deleteFromBasket(${index})" class="trash_img" src="./assets/icon/mulleimer.png" alt="">
                 </div>
             </div>`
-}
+};
 
 function getCostsTemplate(sum, deliveryCosts, sumAndDelivery) {
     return `<span>Zwischensumme:${sum.toFixed(2).replace(".",",")}€</span>
-            <span id="delivery">Lieferkosten:${deliveryCosts.toFixed(2).replace(".",",")}</span>
-            <span>Gesamtsumme:${sumAndDelivery.toFixed(2).replace(".",",")}€</span>`
-    
-}
+            <span id="delivery">Lieferkosten:${deliveryCosts.toFixed(2).replace(".",",")}€</span>
+            <span class='full_Price'>Gesamtsumme:${sumAndDelivery.toFixed(2).replace(".",",")}€</span>`
+};
 
 
 
